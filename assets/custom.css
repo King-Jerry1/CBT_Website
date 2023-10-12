@@ -1,0 +1,105 @@
+/* HOME PAGE STYLESHEET 
+Developer: King Jerry
+language:  Html, Css, Javascript and bootstrap
+powered by: Bootstrap 5 
+*/
+
+/*  Root colors */
+
+*{
+    margin: 0;
+    padding: 1;
+}
+
+
+:root{
+    --color-primary:#08af00;
+    --color-secondary:#004d07;
+    --bg-color-green:#08af00;
+    --bg-color-darkgreen:#004d07;
+    --color-orange: #ff3000;
+    --color-white: #fff;
+    --color-black: #000;
+}
+/*  End of Root colors */
+
+/*  Installed Fonts */
+@font-face {
+  font-family: font-b;
+  src: url('assets/fonts/NunitoSans-Black.ttf');
+}
+@font-face {
+    font-family: font-i;
+    src: url('assets/fonts/NunitoSans-BlackItalic.ttf');
+}
+@font-face {
+    font-family: font-bb;
+    src: url('assets/fonts/NunitoSans-Bold.ttf');
+
+}
+@font-face {
+    font-family:font-exb ;
+    src: url('assets/fonts/NunitoSans-ExtraBold.ttf');
+}
+@font-face {
+    font-family: font-light ;
+    src: url('assets/fonts/NunitoSans-Light.ttf');
+}
+@font-face {
+    font-family: font-regular ;
+    src: url('assets/fonts/NunitoSans-Regular.ttf');
+}
+@font-face {
+    font-family: font-semibold;
+    src: url('assets/fonts/NunitoSans-SemiBold.ttf');
+}
+
+.header{
+    margin-top : 5%;
+}
+
+.rectangle1{
+    background-color: red;
+    color:white;
+    padding-top: 39px;
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-transition: 0;
+    -moz-transition: 0;
+    -ms-transition: 0;
+    -o-transition: 0;
+}
+
+.rectangle1:hover{
+    background: white;
+    color:black;
+
+}
+
+.logo{
+    width:  250px;
+    height: 200px;
+}
+
+.text-control{
+    margin-top:50px;
+}
+.card-header1{
+    font-family: font-b;
+    font-size: 24px;
+}
+
+.questionscript{
+    font-family: font-b;
+    font-size: 29px;
+}
+
+.answerscript{
+    font-family: font-light;
+    font-size: 22px;   
+    text-align: right;
+}
+
+a h1{
+    color: rgb(0, 0, 0);
+}
