@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JAMB Exam Timer</title>
+    <style>
+        #timer {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <label for="duration">Set Exam Duration (minutes):</label>
+    <input type="number" id="duration" min="1" value="60">
+    <button id="startButton">Start Exam</button>
+    <div id="timer">00:00</div>
+
+    <script>
+        let durationInput = document.getElementById('duration');
+        let startButton = document.getElementById('startButton');
+        let timerElement = document.getElementById('timer');
+        let timerInterval;
+        let durationInSeconds = durationInput.value * 60;
+        let secondsRemaining = durationInSeconds;
+
+        function updateTimer() {
+            const minutes = Math.floor(secondsRemaining / 60);
+            const seconds = secondsRemaining % 60;
+            const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            timerElement.textContent = timeString;
+
+            if (secondsRemaining <= 0) {
+                clearInterval(timerInterval);
+                timerElement.textContent = 'Exam Over';
+            } else {
+                secondsRemaining--;
+            }
+        }
+
+        function startTimer() {
+            durationInSeconds = durationInput.value * 60;
+            secondsRemaining = durationInSeconds;
+            updateTimer();
+            timerInterval = setInterval(updateTimer, 1000);
+            durationInput.disabled = true;
+            startButton.disabled = true;
+        }
+
+        startButton.addEventListener('click', startTimer);
+    </script>
+</body>
+</html>

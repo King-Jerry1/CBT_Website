@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration Portal</title>
+        <!--- Bootstrap Framework -->
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="bootstrap/js/bootstrap.js">
+         <!--- End of Bootsrap Framework -->
+        <link rel="stylesheet" href="assets/custom.css">
+        <link rel="stylesheet" href="assets/assets/all.css">
+        <link rel ="stylesheet" href="assets/aos/aos.css">
+        <link rel ="stylesheet" href="assets/swiper/swiper-bundle.css">
+        <link rel="stylesheet" href="assets/remixicon/remixicon.css"  >
+        <link rel="stylesheet" href="assets/animations.css">
+        <link rel="stylesheet" href="assets/bootstrap-icons.css">
+        <script src="assets/index.js"></script>
+    
+        <!--- Font awesome Icon link =-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <!--- Font awesome Icon link  End here=-->
+    
+        <!-- font icons -->
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+      />
+</head>
+<body class="">
+
+    
+
+    <div class="bg-image">
+        <img src="background/lady.jpeg">
+    <div>
+
+
+    <div class="container ">
+        <!--  -->
+    
+        <div class="row " >
+            <div class="bg-register" id="moving-element"> 
+            <h1 class="text-center text-white-50 fst-italic bx-flashing">
+                Login Here !
+            </h1>
+                <div class="col-lg-6 col-md-12 col-sm-12 d-lg-flex d-md-block mx-lg-5 d-flex" style="width:75%; ">
+                    
+                    <form method="post" enctype="multipart/form-data" class="text-white " >
+                    <label for="Username or Email" class="w-100 "> Username or Email
+                        <input type="text" placeholder="Enter Username or Email Address" class="form-control"></label>
+                        <label for="Password" class=" w-100"> Password
+                        <input type="password" name="" id="" placeholder="Enter Password " class="form-control"></label>
+
+                        <label class="pt-2 w-100 d-lg-flex d-md-block " >
+                            <input type="submit" name="" id=""  class="form-control btn sbtn w-35" value="Submit" >             
+                        </label>
+                        <br>
+                        <div class="d-flex py-2" style="width:100%;">
+                            <a href="registration.html" class="btn sbtn " style="width: 40%;" >Click to Register</a>  
+                                <a href="index.html" class="btn sbtn " style=" width: 46%; margin-left: 15px; ">Go Back</a>
+                        </div>
+                    </form>
+                </div>
+        </div>
+    </div>
+    </div>
+
+    <section class=" container footer text-center mt-5 pb-5">
+        <br>
+            <hr>
+            <h5 class="fs-5 fw-bolder">Copyright Reserved@KingJMedia</h5>
+            <span style="font-style: italic;">For More Inquiries</span>  
+            <span class="fs-i" style="font-style: italic;"> +234 8028786923 </span>
+      </section>
+    
+    <!-- Move From  tOP TO ORIGINAL STATE-->
+<script>
+    // JavaScript to trigger the movement effect
+    window.onload = function() {
+      var element = document.getElementById("moving-element");
+      var originalTop = 0;
+      
+      // Move the element down
+      element.style.top = "200px"; // Move to 100px from the top
+      setTimeout(function() {
+        // Move the element back to its original position
+        element.style.top = originalTop + "px";
+      }, 2000); // After 2 seconds, return to the original position
+    };
+  </script>
+</body>
+</html>

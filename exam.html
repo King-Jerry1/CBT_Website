@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jamb CBT TEST</title>
+    <!--- Bootstrap Framework -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/js/bootstrap.js">
+     <!--- End of Bootsrap Framework -->
+    <link rel="stylesheet" href="assets/custom.css">
+    <link rel="stylesheet" href="assets/assets/all.css">
+    <link rel ="stylesheet" href="assets/aos/aos.css">
+    <link rel ="stylesheet" href="assets/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="assets/remixicon/remixicon.css"  >
+    <link rel="stylesheet" href="assets/animations.css">
+    <link rel="stylesheet" href="assets/bootstrap-icons.css">
+    <l""ink rel="stylesheet" href="assets/subject.css">
+  
+
+    <!--- Font awesome Icon link =-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--- Font awesome Icon link  End here=-->
+
+    <!-- font icons -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+  />
+
+  <!---  bootstrap javacript link-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  </style>
+
+</head>
+<body>
+    <header class="test-header container-fluid bg-black  shadow-body pb-lg-2 b-md-3 pb-5 " style="height: auto; position: relative;">
+        <nav class="row">
+
+          <div class="col-lg-6  col-md-12 col-sm-12 d-lg-flex d-md-block">
+            <div class="mx-5">
+             <img src="logo/KING TECH CBT LOGO WHITE.png"  style="width:210px; height:auto; padding:0px 0px;">
+            </div>
+        
+         </div>
+            <div class="col-lg-6  col-md-12 col-sm-12 d-lg-flex d-md-block pt-5" style="font-size: 14px;">
+                <li><a href=""><i class="fa fa-sign-out fa-rotate-180 m-1"></i>Logout</a></li>
+                <li><a href=""><i class="fa fa-calculator"></i> Calculator </a></li>
+                <li><a href=""><i class="fa fa-book"></i> Bookmark </a></li>
+                <li><a href=""><i class="fa fa-warning"></i> Report Error </a></li>
+            </div>
+
+           
+            
+        </nav>
+
+    </header>
+
+    <section class="submit-exam-prompt container " style="position:absolute; z-index: 1; display:none; margin-top: -25px;" id="myModal1">
+      <div class="row">
+        <div class="col-lg-10 col-md-10 col-sm-10  col-6 " style="transform:translate(20%, 0%) !important;">
+          <div class="bg-body shadow pt-5  mt-5 pb-lg-3 pb-md-5 pb-sm-5 pb-5 px-5" style=" height: auto; ">
+            <button class="btn  btn-danger" type="cancel" 
+           
+            style="right:0; position: absolute; margin-right: 42px !important; margin-top: -30px !important;" 
+            onclick="closeModal()"> X </button>
+            <div class="text-center">
+                <p>Are you sure you want to end this exam?
+                </p>
+                <p class='par-btn px-5' style="padding: 0px 50px;" >
+                  <button class="btn btn-success"  onclick='submitExam()'>Yes</button>
+                
+                  <button class="btn btn-success"   onclick='closeModal()'>No</button>
+                </p>
+            </div>
+         
+          </div>
+        </div>
+
+      </div>
+    </section>
+      <section class="profile-card container  pt-lg-5 pt-5 ">
+            <div class="row"><!-- fOR row  -->
+               
+              <div class=" col-lg-4 col-md-12 col-sm-12  text-body shadow pb-lg-5 " style="padding: 20px 30px; padding-bottom: 0%;">
+                    
+                    <div class="d-flex align-items-right">
+                        <img src="background/img2.jpg" class="img-thumbnail  " style="width: 200px; height: 200px; border-radius: 50%;" /> 
+                        <!-- fOR active  -->
+                        <div class="active-circle shadow mt-5"> </div>
+                    </div>
+                   
+                    <div class="pt-2">
+                        <p> <span style="font-weight:bold;" >Name: </span> <span id="userName"> John </span<""/p>
+                            <p>  <span style="font-weight:bold;">Email:</span>  <span id="emailName"> Jeremiah Isaiah </span></p> 
+                            <p> <span style="font-weight:bold;">Phone number:</span> <span id="phoneNumber"> 08028786923 </span</p><br>
+                            <a href="#" class="instructionLink"  onclick="showInstruction()">View instructions</a><br>
+                            <p class="total"></p>
+                            <p class="pSubmit"><button class="btn btn-success" onclick="openModal()">Submit</button></p>
+                    </div>
+                    
+              </div>
+
+                <!-- fOR EXAM CONTENT  -->
+              <div class ="col-lg-8 col-md-12 col-sm-12 " >
+                   <!-- MUTIPLE SUBJECT HEADING  -->
+                         <!-- ** subject SECTION -->
+          
+                  <div class="subjects-div">
+                        <nav>
+                          <ul class="nav nav-tabs studentsLogin" id="nav-tab" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" 
+                              id="nav-english-tab" data-toggle="tab" 
+                              href="#nav-english" 
+                              role="tab" 
+                              aria-controls="nav-english" 
+                              aria-selected="true">
+                                <i class="bi bi-bookmark"></i> English
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="nav-biology-tab" data-toggle="tab" 
+                              href="#nav-biology" role="tab" aria-controls="nav-biology" 
+                              aria-selected="false">
+                                <i class="bi bi-bookmark"></i> Biology
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="nav-Homec-tab" data-toggle="tab" href="#nav-Homec" role=""
+                              aria-controls="nav-Homec" aria-selected="false">
+                                <i class="bi bi-bookmark"></i> Homec
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                    <div>
+                  </div>
+                
+                  
+              
+            <div class=" text-body shadow pb-lg-5  pt-lg-3 pt-5 scroll-containerY mx-3 my-5" 
+                style="padding: 20px 30px; padding-bottom: 0%;">
+
+                
+
+                     <!-- Homec Questions -->
+                     <div class="tab-pane fade" id="nav-Homec" role="tabpanel" aria-labelledby="nav-Homec-tab">
+                      <p class="physics">Passage for Homec </p>
+
+                      <div id="questionDiv">
+                        <p>The most potent element in body language is __________________
+                      
+                          </p>
+                      </div>
+  
+                      <div id="optionDiv">
+                        <label class="label-quiz">
+                          A <input type="radio" name="question1" class="radio-button" value="A"> Mouth
+                        </label>
+                  
+                        <label class="label-quiz">
+                          B <input type="radio" name="question1" class="radio-button" value="B"> Eye
+                        </label>
+                  
+                        <label class="label-quiz">
+                          C <input type="radio" name="question1" class="radio-button" value="C"> Behaviour
+                        </label>
+                  
+                        <label class="label-quiz">
+                          D <input type="radio" name="question1" class="radio-button" value="D"> Eye Behaviour
+                        </label>
+                      </div>
+  
+                      <div id="questionsButton">
+                        
+                          <button class="qbtn  btn btn-secondary "  onclick="">1</button>
+                          <button class="qbtn  btn btn-secondary "  onclick="">2</button>
+                          <button class="qbtn  btn btn-secondary "  onclick="">3</button>
+                          <button class="qbtn  btn btn-secondary "  onclick="">4</button>
+                        
+                        
+                    </div>
+                  </div>
+                    <!-- End of Homec Questions -->
+
+
+
+
+                  <!-- Biology Questions -->
+                  <div class="tab-pane fade" id="nav-biology" role="tabpanel" aria-labelledby="nav-biology-tab" style="margin-top:-230px !important; ">
+                    <p class="biology">Passage for biology are cool</p>
+                    <!-- for option and button -->
+                    <div id="questionDiv">
+                      <p>The most potent element in body language is __________________
+                    
+                        </p>
+                    </div>
+
+                    <div id="optionDiv">
+                      <label class="label-quiz">
+                        A <input type="radio" name="question1" class="radio-button" value="A"> Mouth
+                      </label>
+                
+                      <label class="label-quiz">
+                        B <input type="radio" name="question1" class="radio-button" value="B"> Eye
+                      </label>
+                
+                      <label class="label-quiz">
+                        C <input type="radio" name="question1" class="radio-button" value="C"> Behaviour
+                      </label>
+                
+                      <label class="label-quiz">
+                        D <input type="radio" name="question1" class="radio-button" value="D"> Eye Behaviour
+                      </label>
+                    </div>
+
+                    <div id="questionsButton">
+                      
+                        <button class="qbtn  btn btn-secondary "  onclick="">1</button>
+                        <button class="qbtn  btn btn-secondary "  onclick="">2</button>
+                        <button class="qbtn  btn btn-secondary "  onclick="">3</button>
+                        <button class="qbtn  btn btn-secondary "  onclick="">4</button>
+                      
+                      
+                    </div>
+                  </div>
+                  <!-- End of Biology Questions -->
+            
+                <!-- ENGLISH -->
+                <div class="tab-pane fade pb-lg-4  pb-5 show active " id="nav-english" role="tabpanel" 
+                      aria-labelledby="nav-english-tab" style="margin-top:-270px !important; ">
+                    <h4>
+                      <i class="fas fa-arrow-alt-circle-right"></i> Question 1/20
+                    </h4>
+                    <h5>Read The passage carefully and answer the questions that follow</h5>
+                    <h5 class="px-0">PASSAGE 1</h5>
+                    <p class="english">One of the most potent elements in body language is eye 
+                      behavior: You shift your eyes, meet another person's gaze or fail 
+                      to meet it and produce an effect out of all proportion to 
+                      the trifling muscular effort you have made. In normal conversation,
+                       each eye contact lasts only about a second before one or both individuals 
+                       look away. Because the longer meeting of the eyes is rare, it is weighted 
+                       with significance when it happens and can generate a special kind of 
+                       human-to-human awareness. Most of the time, a lingering look is interpreted 
+                       as a sign of attraction and this should be scrupulously avoided except in 
+                       appropriate circumstances. A young woman once complained, "That man makes me so 
+                       uncomfortable, half the time when I glance at him he's already looking at me - 
+                       and he keeps right on looking"</p>
+
+
+                       <!-- for option and button -->
+                       <div id="questionDiv">
+                        <p>The most potent element in body language is __________________
+                      
+                          </p>
+                      </div>
+  
+                      <div id="optionDiv">
+                        <label class="label-quiz">
+                          A <input type="radio" name="question1" class="radio-button" value="A"> Mouth
+                        </label>
+                  
+                        <label class="label-quiz">
+                          B <input type="radio" name="question1" class="radio-button" value="B"> Eye
+                        </label>
+                  
+                        <label class="label-quiz">
+                          C <input type="radio" name="question1" class="radio-button" value="C"> Behaviour
+                        </label>
+                  
+                        <label class="label-quiz">
+                          D <input type="radio" name="question1" class="radio-button" value="D"> Eye Behaviour
+                        </label>
+                      </div>
+  
+                      <div id="questionsButton">
+                        
+                          <button class="qbtn  btn btn-secondary "  onclick="">1</button>
+                          <button class="qbtn  btn btn-secondary "  onclick="">2</button>
+                          <button class="qbtn  btn btn-secondary "  onclick="">3</button>
+                          <button class="qbtn  btn btn-secondary "  onclick="">4</button>
+                        
+                        
+                      </div>
+                </div>
+
+                
+ 
+
+
+
+         
+            
+              </div>   <!-- fOR second column END  -->  
+              
+            </div><!-- fOR ROW END  -->
+</section>
+
+<!-- <section class="Modal">
+  <div id="myModal" class="modal">
+    Modal content
+        <div class="modal-content">
+            <span class="close" onclick="()">&times;</span>
+            <div id="instructions"></div>
+        </div>
+        <div class="loader2 loader"></div>
+    </div>
+</section>
+         -->
+
+<section class=" container footer text-center mt-5 pb-5">
+    <br>
+        <hr class="hr-white">
+        <h5 class="fs-5 fw-bolder">Copyright Reserved@KingJMedia</h5>
+        <span style="font-style: italic;">For More Inquiries</span>  
+        <span class="fs-i" style="font-style: italic;"> +234 8028786923 </span>
+  </section>
+
+        <!--! Bootstrap JavaScript Libraries -->
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sge
+          
+        </script>z6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"
+      ></script>
+  
+      <!-- ** tooltip script -->
+      <script>
+        const tooltips = document.querySelectorAll(".tt");
+        tooltips.forEach((t) => {
+          new bootstrap.Tooltip(t);
+        });
+      </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      
+
+
+<!-- Previous button to Next Content Javascript-->
+<script src="assets/prev-next.js"></script>
+
+<script src="assets/app.js"></script>
+
+  
+
+<!--Modal Function-->
+<script>
+
+function openModal() {
+  var modal = document.getElementById('myModal1');
+  modal.style.display = 'block';
+  console.log('Modal opened');
+}
+
+function closeModal() {
+  var modal = document.getElementById('myModal1');
+  modal.style.display = 'none';
+  console.log('Modal closed');
+}
+
+function submitExam() {
+  // Logic for submitting the exam
+  console.log('Exam submitted');
+}
+
+</script>
+</body>
+</html>

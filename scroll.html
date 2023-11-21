@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JAMB Exam Timer</title>
+    <style>
+        #timer {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="timer">00:00:00</div>
+
+    <script>
+        function updateTimer() {
+            const timerElement = document.getElementById('timer');
+            let seconds = 0;
+            let minutes = 0;
+            let hours = 0;
+
+            setInterval(function() {
+                seconds++;
+
+                if (seconds == 60) {
+                    seconds = 0;
+                    minutes++;
+                }
+
+                if (minutes == 60) {
+                    minutes = 0;
+                    hours++;
+                }
+
+                const timeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                timerElement.textContent = timeString;
+            }, 1000);
+        }
+
+        // Start the timer
+        updateTimer();
+    </script>
+</body>
+</html>

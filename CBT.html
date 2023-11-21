@@ -6,13 +6,306 @@
     <title>Practice UTME </title>
     <!--- Bootstrap Framework -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    
     <link rel="stylesheet" href="bootstrap/js/bootstrap.js">
      <!--- End of Bootsrap Framework -->
-    <link rel="stylesheet" href="assets/custom.css">
+    <link rel="stylesheet" href="assets/custom.css"
+    >
+    <link rel="stylesheet" href="assets/cbt.css">
+    
+
     <script src="assets/index.js"></script>
+    <script src="assets/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    
+    <!--- Font awesome Icon link =-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--- Font awesome Icon link  End here=-->
+
+    <!-- font icons -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+  />
+
+        
+
+    <style>
+        /* Style for the scrollbar */
+        .scroll-container {
+            white-space: nowrap;
+            width:100%;
+          /* Set the desired height for the container */
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+    </style>
 </head>
 <body class="bg-dark text-bg-primary">
  
-<H1>Welcome to the CBT Test</H1>
-</body>
+    <!-- <section  class="container  navigation">
+                ** navbar links -->
+        <!-- <div class="row"> 
+            <nav class ="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">View</a>
+                        <ul class ="view-option">
+                            <li><a href=""></a> Result History</li>
+                            <li><a href=""></a> Bookmarks</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>        
+        </div>
+     </section> -->
+
+    <section class="container">
+        <div class="header pb-3 pt-4">
+            <h1>Practice UTME</h1>
+        </div>
+       
+
+        <div class="container m-5">
+            <div class="row">       
+
+                           <div class="col-lg-4 col-md-4 col-sm-12 d-block "><!-- first Column starts Here -->
+                            <h4> Select One  or More Subjects </h4>
+                            <br>
+                            <div class="scroll-container "> <!-- Responsible For scrolling-->
+                            
+                            <label><input type="checkbox" name="item2" class="checkbox" value="Item 2"> English</label>
+                            <label><input type="checkbox" name="item3" class="checkbox" value="Item 3"> Computer</label>
+                            <label><input type="checkbox" name="item4" class="checkbox" value="Item 4"> Homec</label>
+                         
+                            <label><input type="checkbox" name="item4" class="checkbox" value="Item 4" disabled> Government</label>
+                            <label><input type="checkbox" name="item2" value="Item 2" disabled> Account  </label>
+                            <label><input type="checkbox" name="item3"  class="checkbox"value="Item 3" disabled> Physics</label>
+                                <br>
+
+                            <div> <!-- This Div Breaks the Current Row and takes the remaining items to the next line-->
+                            <label> <input type="checkbox" name="item2" class="checkbox" value="Item 2" disabled> Chemistry</label>
+                            <label><input type="checkbox" name="item3"  class="checkbox"value="Item 3" disabled> Economics</label>
+
+                            <label><input type="checkbox" name="item2"  class="checkbox"value="Item 2"  disabled> Commerce</label>
+                            <span>
+                            </div>
+
+                        </div> <!-- Scrollbar Ends Here -->
+
+                    
+                    
+                        <!-- Add more checkboxes as needed --> 
+                        <br>
+                
+                          
+                          <!-- <div id="toggleButton" class=" fa fa-arrow-right">
+                        
+                                <h5 style="text-align: right;"> Subjects  </h5><br> 
+                                    <h6  id="text-notifier" class="padding: 2px;" >Click to Show Settings </h6>
+                        </div> -->
+
+                     <div class="settings px-2 py-2  " style="cursor: pointer; width: 100%;">
+                        <i id="toggleButton" class="bi bi-arrow-right"> 
+                            <span class="" style="padding-left: 5%;"> English 
+
+                            <p style="padding-left: 5%;" id="text-notifier"> Click to Show Settings </p>
+                        </span> 
+                    </i>
+
+                       
+                    </div>
+
+                    <div id="subContent">
+                        
+                        <h5> Year</h5>
+                        <select class=" form-select form-selection">
+                            <option> 2019 </option>
+                            <option> 2020 </option>
+                            <option> 2021 </option>
+                            <option> 2022 </option>
+                            <option> 2023 </option>
+                        </select>
+
+                        <br>
+                    
+                        <!--- Number of questions  -->
+
+
+                        <div class="number-of-questions">
+                            <h5> Number of questions</h5>
+                            <select class=" form-select form-selection">
+                                <option> 10 </option>
+                                <option> 20 </option>
+                                <option> 30 </option>
+                                <option> 40 </option>
+                                <option> 50 </option> 
+                            </select>
+                       
+                    </div>
+                    
+                    <br>
+
+                    <div class="topic-selected">
+                        <button class="btn1 " id="topic-selected"> Select Topics of Interest</button>
+                    </div>
+
+                    </div><!--- subContent ends here-->
+
+
+                  
+                
+                </div><!-- first Column DIV Ends Here -->
+
+                    <!-- Second Colum for Jamb Logo-->
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                      <div>
+                        <img src="logo/KING TECH CBT LOGO WHITE.png"> 
+                        <p  class="text-center" style="font-style:italic; font-size:18px;"> ...strive to build a digital world</p>
+                      </div>
+
+                    
+                    </div>
+
+             
+
+                     <!-- Second Column ends here-->
+
+
+
+
+
+
+                        <!-- Third  Column Jamb Test Setting -->
+                        <div class="col-lg-4 col-md-4 col-sm-12 d-block  px-2">
+                    
+                            <!-------------- Modes   ------------>
+                           <div class="d-flex">
+                            <hr class="line px-2" > <span class="mx-3"> Mode </span>  <hr class="line">
+                           </div>
+                               
+
+                               <div class="d-flex" style="width:100%;">
+                                
+                                    <label class="Modes">
+                                        <select name="" id="" class="form-select">
+                                            <option value="" selected="selected"   disabled> Select Mode </option>
+                                            <option value="" selected="selected" disabled> Study </option>
+                                            <option value="" selected="selected" disabled> Mock </option>
+                                            <option value="" selected="selected" > Practice </option>
+                                        </select>
+                                    </label>
+                                </div>
+
+                             <!-------------- End of Modes  ------------>
+
+
+                            <!-------------- Total Time  Starts Here ------------>
+                                
+                                <div class="d-flex">
+                                    <hr class="line px-2" > <span class="mx-3"> Total Time </span>  <hr class="line">                                 
+                                 </div>
+
+                                 <label for="duration">Set Exam Duration (minutes):</label>
+                                     <input type="number" id="duration" min="1" value="60">
+                                         <a href="exam.html"><button id="startButton" class="startButton">Start Exam</button></a>
+                       
+                                        <div id="timer">00:00</div>
+
+
+                                          <!-- Total Time Section -->
+
+
+                            <!--------------End of  Total Time  ------------>   
+                                            
+                                            
+
+                             <!-------------- Options for Shuffle   ------------>
+                                            <div class="d-flex">
+                                                <hr class="line px-2" > <span class="mx-3"> Options </span>  <hr class="line">
+                                            </div>
+                                    
+
+                                             <div class="d-flex" style="width:100%;">
+                                        
+                                            <label class="Options">
+                                                <label><input type="checkbox" name="shuffle1" class="checkbox" value="Item 2"> Shuffle Questions</label><br>
+                                                <label><input type="checkbox" name="shuffle2" class="checkbox" value="Item 3"> Shuffle Options</label>
+                                            </div>
+
+                             <!-------------- End of Options  ------------>
+
+      
+
+
+            </div>  <!-- First Row Ends Here-->
+        </div><!-- First  Container Ends Here-->
+       
+
+    
+</section>
+    
+    
+
+</label>
+
+</span>
+
+
+<section class=" container footer text-center mt-5 pb-5">
+    <br>
+        <hr class="hr-white">
+        <h5 class="fs-5 fw-bolder">Copyright Reserved@KingJMedia</h5>
+        <span style="font-style: italic;">For More Inquiries</span>  
+        <span class="fs-i" style="font-style: italic;"> +234 8028786923 </span>
+  </section>
+
+<script>
+    // Timer setting 
+    let durationInput = document.getElementById('duration');
+    let startButton = document.getElementById('startButton');
+    let timerElement = document.getElementById('timer');
+    let timerInterval;
+    let durationInSeconds = durationInput.value * 60;
+    let secondsRemaining = durationInSeconds;
+
+    function updateTimer() {
+        const minutes = Math.floor(secondsRemaining / 60);
+        const seconds = secondsRemaining % 60;
+        const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        timerElement.textContent = timeString;
+
+        if (secondsRemaining <= 0) {
+            clearInterval(timerInterval);
+            timerElement.textContent = 'Exam Over';
+        } else {
+            secondsRemaining--;
+        }
+    }
+
+    function startTimer() {
+        durationInSeconds = durationInput.value * 60;
+        secondsRemaining = durationInSeconds;
+        updateTimer();
+        timerInterval = setInterval(updateTimer, 1000);
+        durationInput.disabled = true;
+        startButton.disabled = true;
+    }
+
+    startButton.addEventListener('click', startTimer);
+</script>
+
+<!--- For Toogle-->
+<script src="assets/toogle.js">
+    
+</script>
+
+
+
+</body> 
 </html>

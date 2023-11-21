@@ -4,27 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Jamb CBT Practice Website</title>
-    <!--- Bootstrap Framework -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="bootstrap/js/bootstrap.js">
-     <!--- End of Bootsrap Framework -->
-    <link rel="stylesheet" href="assets/custom.css">
-    <script src="assets/index.js"></script>
+       <!--- Bootstrap Framework -->
+       <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+       <link rel="stylesheet" href="bootstrap/js/bootstrap.js">
+        <!--- End of Bootsrap Framework -->
+       <link rel="stylesheet" href="assets/custom.css">
+       <link rel="stylesheet" href="assets/assets/all.css">
+       <link rel ="stylesheet" href="assets/aos/aos.css">
+       <link rel ="stylesheet" href="assets/swiper/swiper-bundle.css">
+       <link rel="stylesheet" href="assets/remixicon/remixicon.css"  >
+       <link rel="stylesheet" href="assets/animations.css">
+       <link rel="stylesheet" href="assets/bootstrap-icons.css">
+       <script src="assets/index.js"></script>
+   
+       <!--- Font awesome Icon link =-->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+           <!--- Font awesome Icon link  End here=-->
+   
+       <!-- font icons -->
+       <link
+       rel="stylesheet"
+       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
 </head>
-<body class="bg-dark text-bg-primary">
-    <section class="container header overflow-hidden">
+<body class="" id="fade-in-element">
+
+
+   <div  class="pb-5 mb-5 bg-img" style="position: absolute; z-index: -1;
+        width:100%; height: 100vh; margin: -360px 0px; opacity: 1;">
+    <img src="background/BG-VECTOR.jpeg" class="pb-5  px-5" style="width:100%; height: 100vh;" >
+   </div>
+    <section class="container  overflow-hidden header">
+      
         <div class="row ">
 
             <div class="col-lg-6 px-2 py-4"> <!-- Column 1-->
 
-                <div class="rectangle1 px-4 pb-3 mx-3">
-                    <span class="d-lg-flex">
-                        <img src="logo/jamblogo.png">
+                <div class="rectangle1 px-4 pb-5 mx-3 " data-toggle="tooltips" data-placement="top" title="Click on Practice Utme to start">
+                    <span class="d-lg-flex shadow pb-2">
+                        <img src="logo/KING TECH CBT LOGO WHITE1.png" style="width:60%;" >
                    
                         <div class="text-control">  
-                            <a href="CBT.html"  style="text-decoration: none;">
-                            <h1 class="card-header1" >Practice UTME</h1> </a>
-                            <p>With over 11,000 Offline Questions </p>
+                            <a href="login.html"  style="text-decoration: none;">
+                            <h1 class="card-header1" >Practice CBT</h1> </a>
+                            <p>With over 100 Offline Questions </p>
                         </div>
                     
                     </span>
@@ -37,13 +60,12 @@
             <div class="col-lg-6 px-2 py-4"> <!-- Column 2 -->
 
                 <div class="rectangle1 px-4 pb-3 mx-3">
-                    <span class="d-lg-flex">
+                    <span class="d-lg-flex  shadow">
                         <img src="logo/jamblogo1.png">
                    
-                        <div class="text-control">  
+                        <div class="text-control ">  
                             <a href="Novel.html" style="text-decoration: none;">
                                <h1 class="card-header1">Last Days at Forcades</h1></a>
-                            <p>Excellent Summary of Jamb's </p>
                             <p>Recommended Literature</p>
                             </div class="text-control">
                     
@@ -55,7 +77,8 @@
         </div>
         
     </section>
-  
+    
+
 
     <section class="Answers reviewed">
 
@@ -65,7 +88,7 @@
             <div class="rectangle1 px-4 pb-3 mx-3">
                     
                
-                    <div class="text-control">  
+                    <div class="text-control shadow px-5 my-5" style="padding: 20px 30px;">  
                         
                         <h1 class="questionscript">Who is the father of Jesus ? </h1>   </a>
                         <p class="answerscript"><span> Answers: </span> Jospeph </p>
@@ -78,6 +101,45 @@
         </div>
 
     </section>
+
+
+    <section class=" container footer text-center mt-5 pb-5">
+        <br>
+            <hr class="hr-white">
+            <h5 class="fs-5 fw-bolder">Copyright Reserved@KingJMedia</h5>
+            <span style="font-style: italic;">For More Inquiries</span>  
+            <span class="fs-i" style="font-style: italic;"> +234 8028786923 </span>
+      </section>
+    
+
+
+<!--- For Notifier-->
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+            })
+    </script>
+
+   <!--- Fade In effect--> 
+  <script>
+    // JavaScript to trigger the fade-in effect
+    window.onload = function() {
+      var element = document.getElementById("fade-in-element");
+      var opacity = 0;
+      
+      var fadeInInterval = setInterval(function() {
+        opacity += 0.02; // Increase the opacity gradually
+        element.style.opacity = opacity;
+        
+        if (opacity >= 1) {
+          clearInterval(fadeInInterval); // Stop the interval when opacity reaches 1
+        }
+      }, 20); // Adjust the interval duration for a smoother or faster fade-in effect
+    };
+  </script>
+
+
+
 
 </body>
 </html>
